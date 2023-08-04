@@ -1,0 +1,139 @@
+1º - 
+
+A aleatoriedade estatística refere-se à variabilidade e incerteza inerentes aos dados em uma amostra ou população.
+
+Imprevisibilidade é a incapacidade de prever com certeza o resultado de um evento devido a fatores desconhecidos, aleatórios ou complexos.
+
+2º - 
+
+Segurança contra ataques criptográficos conhecidos: O algoritmo deve ser projetado para resistir a ataques bem estabelecidos, como criptoanálise diferencial, criptoanálise linear, entre outros. Isso envolve a escolha adequada de operações criptográficas e a utilização de componentes comprovadamente seguros.
+
+Geração segura de chaves: O processo de geração de chaves deve ser robusto, garantindo a aleatoriedade e a não previsibilidade das chaves. Mecanismos adequados, como geradores de números pseudo aleatórios seguros, são essenciais.
+
+Eficiência em tempo real e baixo consumo de recursos: Cifras de fluxo são frequentemente usadas em sistemas em tempo real, como comunicações e criptografia de dados em movimento. Portanto, a eficiência computacional é fundamental para garantir que a cifra possa criptografar e decifrar dados em velocidade adequada.
+
+Função de cifragem não linear: Uma função não linear é necessária para evitar padrões previsíveis no fluxo de bits gerado. A utilização de operações como substituição e permutação não lineares pode aumentar a segurança da cifra.
+
+Sequência de bits não se repete rapidamente: A cifra deve ser projetada para produzir um fluxo de bits com um ciclo longo antes de se repetir, a fim de evitar ataques de repetição.
+
+Alterações na chave ou texto claro afetam significativamente o texto cifrado: Mudanças mínimas na chave ou no texto claro devem resultar em mudanças drásticas e imprevisíveis no texto cifrado, garantindo a propriedade de difusão.
+
+Testes criptográficos rigorosos: O algoritmo deve ser submetido a uma ampla variedade de testes criptográficos para garantir sua robustez contra diferentes tipos de ataques, incluindo testes de aleatoriedade, entropia, autocorrelação, entre outros.
+
+Resistência a erros de transmissão: A cifra de fluxo deve ser capaz de resistir a erros de transmissão, evitando que pequenos erros na recepção de dados causem grandes erros na decifragem.
+
+Análise de riscos: Deve-se realizar uma análise detalhada dos riscos potenciais e vulnerabilidades para garantir que o algoritmo seja seguro em várias situações e cenários de uso.
+
+Reavaliação constante da segurança: A segurança criptográfica está em constante evolução, com novos métodos de ataque sendo desenvolvidos ao longo do tempo. Portanto, a cifra de fluxo deve ser periodicamente revisada e atualizada para garantir sua eficácia contínua contra ameaças emergentes.
+
+3º - 
+
+A reutilização de uma chave de cifra de fluxo não é desejável porque pode levar à previsibilidade do fluxo de bits, permitindo ataques de repetição e comprometendo a segurança dos dados criptografados. É importante gerar chaves únicas para cada fluxo de dados para garantir a confidencialidade e a segurança.
+
+4º - 
+
+Troca (Swap): O RC4 possui um array interno (S-box) de 256 bytes, que inicialmente contém valores sequenciais de 0 a 255 em ordem. Durante a inicialização, esse array é permutado (embaralhado) várias vezes, trocando os valores de suas posições. Essa operação de troca é fundamental para criar uma sequência de bits pseudo-randômicos, que é usada para gerar o fluxo de cifragem.
+
+Geração de Pseudo Aleatório: O RC4 usa a operação de geração de números pseudo aleatórios com base no estado do S-box, após as permutações iniciais. A partir desse estado, são geradas sequências de bits que são combinadas com os dados a serem cifrados (ou decifrados) usando a operação "XOR" (OU-exclusivo).
+
+5º -
+
+Já que o 31 é primo, o “a” deverá se encontrar em um período de no máximo m-1, que no caso será 30, começando por ”a” sendo 3 e “k” sendo 1:
+
+X0 = 1
+
+X1 = (3*1 = 3) mod 31 = 3
+
+X2 = (3*3 = 9) mod 31 = 9
+
+X3 = (3*9 = 27) mod 31 = 27
+
+X4 = (3*27 = 81) mod 31 = 19
+
+X5 = (3*19 =  57) mod 31 = 26
+
+X6 = (3*26 = 78) mod 31 = 16
+
+X7 = (3*16 = 48) mod 31 = 17
+
+X8 = (3*17 = 51) mod 31 = 20
+
+X9 = (3*20 = 60) mod 31 = 29
+
+X10 = (3*29 = 87) mod 31 = 25
+
+X11 = (3*25 = 75) mod 31 = 13
+
+X12 = (3*13 = 39) mod 31 = 8
+
+X13 = (3*8 = 24) mod 31 = 24
+
+X14 = (3*24 = 72) mod 31 = 10
+
+X15 = (3*10 = 30) mod 31 = 30
+
+X16 = (3*30 = 90) mod 31 = 28
+
+X17 = (3*28 = 84) mod 31 = 22
+
+X18 = (3*22 = 66) mod 31 = 4
+
+X19 = (3*4 = 12) mod 31 = 12
+
+X20 = (3*12 = 36) mod 31 = 5
+
+X21 = (3*5 = 15) mod 31 = 15
+
+X22 = (3*15 = 45) mod 31 = 14
+
+X23 = (3*14 = 42) mod 31 = 11
+
+X24 = (3*11 = 33) mod 31 = 2
+
+X25 = (3*2 = 6) mod 31 = 6
+
+X26 = (3*6 = 18) mod 31 = 18
+
+X27 = (3*18 = 54) mod 31 = 23
+
+X28 = (3*23 = 69) mod 31 = 7
+
+X29 = (3*7 = 21) mod 31 = 21
+
+X30 = (3*21 = 33) mod 31 = 1 (Se repete a partir daqui)
+ 
+X31 = (3*1 = 3) mod 31 = 3
+
+A partir do X30, se repetirá pois o valor será 3*1 novamente, igual o X1. Como a sequência finaliza no 30, que seria o m - 1 (31 - 1), está correto que há uma sequência quando “a” for igual a 3.
+
+6º - 
+
+a) Para calcular o período máximo do gerador, precisamos encontrar o menor valor de ”k” para o qual a sequência se repete. Vamos começar com a semente X0 = 1 e o módulo m = 2^4 = 16.
+
+Vamos calcular a sequência até encontrar um padrão repetitivo:
+
+a = 2 
+
+X1 = (2 * 1) mod 16 = 2
+X2 = (2 * 2) mod 16 = 4
+X3 = (2 * 4) mod 16 = 8
+X4 = (2 * 8) mod 16 = 0 (Se repete a partir daqui)
+X5 = (2 * 0) mod 16 = 0
+
+O padrão se repete a partir de X4 = 0. Portanto, o período máximo que pode ser obtido neste gerador é 4.
+
+b)  Para determinar o valor de a que produz o período máximo, precisamos encontrar um valor de a que não produza zero após algumas iterações.
+
+Se a sequência chegar a 0 antes de repetir o padrão, não poderemos obter o período máximo. Então, precisamos encontrar um valor que não gere zero até que o padrão se repita.
+
+c)  As restrições na semente são que ela não pode ser zero, pois se X0 for zero, a sequência ficará presa em zero e nunca produzirá um período maior do que 1.
+
+Portanto, para obter o período máximo do gerador citado na questão, o valor de “a” não deve gerar zero e o período máximo é 4.
+
+7º -
+
+Uma chave válida que deixará o array S inalterado durante a inicialização do RC4 é uma sequência de valores de 0 a 255 em ordem crescente. Com essa chave, a permutação inicial do array S não causaria nenhuma alteração, já que os valores já estão em sua posição correta no array. Consequentemente, a sequência gerada a partir do RC4 seria uma sequência linear de 0 a 255, o que não é considerado seguro em termos de criptografia.
+
+
+
+
